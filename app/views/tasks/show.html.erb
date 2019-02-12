@@ -1,0 +1,25 @@
+
+<div class="container">
+
+<h1>Task: <%=@task.title %></h1>
+
+<ul class="list-group">
+  <li class="list-group-item">
+    <p><%= @task.details %> </p>
+  </li>
+  <li class="list-group-item">
+    <% if @task.completed %>
+        <input type="checkbox" checked>
+        <label> This task has been completed.</label>
+    <% else %>
+        <input type="checkbox">
+        <label>This task has not been completed yet.</label>
+    <% end %>
+  </li>
+</ul>
+
+
+<p><%= link_to "Edit task", edit_task_path %></p>
+<p><%= link_to "Back to list", tasks_path %></p>
+
+</div>
